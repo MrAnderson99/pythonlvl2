@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+"""
+
+Task 05 for lesson 01
+
+"""
+
+import subprocess
+
+args0 = ['ping','-c 3','youtube.com']
+
+args1 = ['ping','-c 3','yandex.ru']
+
+
+# ping result for http://www.youtube.com/ using subprocess module
+
+youtube_subproc_ping = subprocess.Popen(args0, stdout=subprocess.PIPE)
+
+for result in youtube_subproc_ping .stdout:
+    result = result.decode('cp866').encode('UTF-8')
+    print(result.decode('UTF-8'))
+    
+print("\n")
+print("-"*40)
+
+
+# ping result for http://www.yandex.ru/ using subprocess module    
+
+yandex_subproc_ping = subprocess.Popen(args1, stdout=subprocess.PIPE)
+
+for result1 in yandex_subproc_ping.stdout:
+    result1 = result1.decode('cp866').encode('UTF-8')
+    print(result1.decode('UTF-8'))

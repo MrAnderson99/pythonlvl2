@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+
+"""
+
+Task 3 for lesson 01
+
+"""
+
+attribute_word = b'attribute'
+
+class_word = b'класс'
+
+function_word = b'функция'
+
+type_word = b'tyepe'
+
+print("Print the value of attribute_word, class_word, funvtion_word,type_word variables: /n{0}/n{1}/n{2}/n{3}".format(attribute_word, class_word, function_word, type_word))
+
+"""
+
+We can't write word класс as byte type because this type can contain only ASCII literal characters.
+Message from python console:
+    SyntaxError: bytes can only contain ASCII literal characters.
+    
+
+"""
